@@ -8,6 +8,13 @@
 		dma-names = "dma_proxy_tx", "dma_proxy_rx";
 		dma-coherent;
 	} ;
+
+	axidmatest_1: axidmatest@1 {
+		compatible ="xlnx,axi-dma-test-1.00.a";
+        dmas = <&axi_dma_1 0
+        &axi_dma_1 1>;
+        dma-names = "axidma0", "axidma1";
+	} ;
 };
 #include "zynqmp_enclustra_common.dtsi"
 #include "zynqmp_enclustra_mercury_xu5.dtsi"
